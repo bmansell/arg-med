@@ -8,6 +8,12 @@ Template.listings.helpers({
     }
 });
 
+Template.mediators.helpers({
+    mediators: function() {
+        return Mediators.find();
+    }
+});
+
 Template.registerHelper('timestampToTime', function (timestamp) {
     var date = new Date(timestamp);
     var hours = date.getHours();
@@ -34,6 +40,16 @@ Template.channel.helpers({
         } else {
             return '';
         }
+    }
+});
+
+Template.addchannel.events({
+    'submit form': function(event, instance) {
+        event.preventDefault();
+        var name = instance.find('input').value;
+        instance.find('input').value = '';
+
+        Channels.insert({name: name});
     }
 });
 

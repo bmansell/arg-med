@@ -4,16 +4,34 @@ Meteor.startup(function() {
     Messages.remove({});
     Channels.remove({});
 
-    Accounts.createUser({
+    var users = [{
         username: 'admin',
-        password: 'admin'
+        password: 'admin',
+        roles: ['admin']
+        }, {
+        username: 'mediator',
+        password: 'mediator',
+        roles: ['mediator']
+    }];
+
+    _.each(users, function(d) {
+        var userId = Accounts.createUser({
+            username: d.username,
+            password: d.password
+        });
+
+        Roles.addUsersToRoles(userId, d.roles);
+    });
+
+    Mediators.insert({
+        name: 'request mediator'
     });
 
     Channels.insert({
-        name: 'general'
+        name: 'general chat'
     });
 
     Channels.insert({
-        name: 'random'
+        name: 'random chat'
     });
 });

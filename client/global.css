@@ -141,6 +141,14 @@ body {
     font-weight: 500;
 }
 
+.login_button {
+    color: #555459;
+    font-size: 1rem;
+    font-weight: 900;
+    float: right;
+    padding: .5rem .5rem 0 0;
+}
+
 /* line 1, ../tests/sass/components/_main.scss */
 .listings {
     height: 100%;
@@ -150,6 +158,19 @@ body {
     background-color: #4d394b;
     overflow-y: auto;
     overflow-x: hidden;
+    top: 120px;
+    position: absolute;
+}
+
+.mediators {
+    height: 100%;
+    width: 240px;
+    float: left;
+    color: #ab9ba9;
+    background-color: #4d394b;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
 }
 
 /* line 11, ../tests/sass/components/_main.scss */
@@ -162,12 +183,12 @@ body {
 }
 
 /* line 4, ../tests/sass/components/_listings.scss */
-.listings_channels {
+.listings_channels, .mediators_available {
     margin: 1rem 0 2rem;
 }
 
 /* line 8, ../tests/sass/components/_listings.scss */
-.listings_header {
+.listings_header, .mediators_header {
     text-align: left;
     font-size: .8rem;
     line-height: 1.25rem;
@@ -180,14 +201,14 @@ body {
 }
 
 /* line 20, ../tests/sass/components/_listings.scss */
-.channel_list {
+.channel_list, .mediator_list {
     list-style-type: none;
     text-align: left;
     color: #ab9ba9;
 }
 
 /* line 26, ../tests/sass/components/_listings.scss */
-.channel {
+.channel, .mediator {
     height: 24px;
     line-height: 24px;
     -moz-border-radius-topright: 0.25rem;
@@ -305,7 +326,7 @@ body {
     left: 0;
 }
 
-/* line 18, ../tests/sass/components/_user-menu.scss */
+/* line 18, ../tests/sass/components/_user-menu.scss
 .user-menu_profile-pic {
     display: inline-block;
     float: left;
@@ -319,7 +340,7 @@ body {
     margin-right: 8px;
 }
 
-/* line 29, ../tests/sass/components/_user-menu.scss */
+/* line 29, ../tests/sass/components/_user-menu.scss
 .user-menu_username {
     display: block;
     color: #ffffff;
@@ -329,13 +350,13 @@ body {
     max-width: 120px;
 }
 
-/* line 38, ../tests/sass/components/_user-menu.scss */
+/* line 38, ../tests/sass/components/_user-menu.scss
 .connection_icon {
     width: 12px;
     height: 12px;
 }
 
-/* line 43, ../tests/sass/components/_user-menu.scss */
+/* line 43, ../tests/sass/components/_user-menu.scss
 .connection_status {
     color: #ab9ba9;
 }
@@ -371,7 +392,11 @@ body {
     padding: 9px 5px 9px 8px;
 }
 
-.channel_name {
+.channel_name, .mediator_name {
     text-decoration: none;
     color: inherit;
+}
+
+.add_channel {
+
 }

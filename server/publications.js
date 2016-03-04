@@ -11,3 +11,7 @@ Meteor.publish('allUsernames', function() {
 Meteor.publish('channels', function() {
     return Channels.find();
 });
+
+Meteor.publish('mediators', function() {
+	return Mediators.find();
+});
