@@ -1,6 +1,6 @@
 Meteor.subscribe('channels');
 Meteor.subscribe('allUsernames');
-Meteor.subscribe('mediators');
+Meteor.subscribe('mediatorlist');
 
 Template.messages.onCreated(function() {
     var self = this;
@@ -9,3 +9,4 @@ Template.messages.onCreated(function() {
         self.subscribe('messages', Session.get('channel'));
     });
 });
+

@@ -10,7 +10,7 @@ Template.listings.helpers({
 
 Template.mediators.helpers({
     mediators: function() {
-        return Mediators.find();
+        return Mediatorlist.find();
     }
 });
 
@@ -75,3 +75,4 @@ Accounts.ui.config({
 
 Meteor.subscribe('messages');
 Meteor.subscribe('allUsernames');
+Meteor.subscribe('mediators');

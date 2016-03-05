@@ -4,6 +4,7 @@ Meteor.startup(function() {
     Messages.remove({});
     Channels.remove({});
     Mediators.remove({});
+    Mediatorlist.remove({});
 
     /* Set up default users */
     var users = [{
@@ -31,18 +32,23 @@ Meteor.startup(function() {
 
     /* Seed with a few test messages */
     if(Messages.find().count() === 0) {
-        Messages.insert({text: "Message 1", user: 'user1', timestamp: Date.now(), channel: 'general'});
-        Messages.insert({text: "Message 2", user: 'user2', timestamp: Date.now(), channel: 'general'});
-        Messages.insert({text: "Message 3", user: 'mediator', timestamp: Date.now(), channel: 'general'});
-        Messages.insert({text: "Message 4", user: 'user1', timestamp: Date.now(), channel: 'random'});
-        Messages.insert({text: "Message 5", username: 'user2', timestamp: Date.now(), channel: 'random'});
-        Messages.insert({text: "Message 6", username: 'mediator', timestamp: Date.now(), channel: 'random'});
-        Messages.insert({text: "Random stuff about mediator", channel: 'request mediator'})
+        for(var i=0; i<10; i++) {
+            Messages.insert({text: "Message 1", user: Meteor.users.findOne({'username': 'user1' })._id, timestamp: Date.now(), channel: 'general'});
+            Messages.insert({text: "Message 2", user: Meteor.users.findOne({'username': 'mediator' })._id, timestamp: Date.now(), channel: 'general'});
+            Messages.insert({text: "Message 3", user: Meteor.users.findOne({'username': 'user2' })._id, timestamp: Date.now(), channel: 'general'});
+            Messages.insert({text: "Message 4", user: Meteor.users.findOne({'username': 'user1' })._id, timestamp: Date.now(), channel: 'random'});
+            Messages.insert({text: "Message 5", user: Meteor.users.findOne({'username': 'mediator' })._id, timestamp: Date.now(), channel: 'random'});
+            Messages.insert({text: "Message 6", user: Meteor.users.findOne({'username': 'user2' })._id, timestamp: Date.now(), channel: 'random'});
+        }   
     }
 
     /* Seed collections */
     Mediators.insert({
-        name: 'request mediator'
+        name: 'Mediator 1', text: "Some random text about this mediator"
+    });
+
+    Mediatorlist.insert({
+        name: 'Request Mediator'
     });
 
     Channels.insert({

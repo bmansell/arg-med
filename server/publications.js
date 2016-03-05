@@ -12,6 +12,10 @@ Meteor.publish('channels', function() {
     return Channels.find();
 });
 
+Meteor.publish('mediatorlist', function() {
+	return Mediatorlist.find();
+});
+
 Meteor.publish('mediators', function() {
 	return Mediators.find();
 });

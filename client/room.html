@@ -2,9 +2,13 @@
 <template name="app">
 {{> header}}
 <div class="main">
-    {{> mediators}}
+	<div class="login_button">
+		{{> loginButtons}}
+	</div>
+	{{> mediators}}
     {{> listings}}
     {{> users}}
+    {{> scratchpad}}
     {{> yield}}
 </div>
 {{> footer}}

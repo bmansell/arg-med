@@ -120,7 +120,6 @@ body {
     background: #3e313c;
     border-bottom: 2px solid #372c36;
     float: left;
-    cursor: pointer;
 }
 
 /* line 19, ../tests/sass/components/_header.scss */
@@ -131,7 +130,22 @@ body {
     font-size: 1.4rem;
     font-weight: 900;
     line-height: 53px;
-    cursor: pointer;
+}
+
+.scratchpad-menu {
+    display: inline-block;
+    width: 20%;
+    height: 53px;
+    line-height: 53px;
+    font-weight: 900;
+    padding: 0 1rem;
+    font-weight: 900;
+    color: #333333;
+    background: #808080;
+    position: fixed;
+    border-bottom: 2px solid #555459;
+    top: 0;
+    right: 0;
 }
 
 /* line 29, ../tests/sass/components/_header.scss */
@@ -142,47 +156,49 @@ body {
 }
 
 .login_button {
-    color: #555459;
+    height: 100%;
+    width: 240px;
+    color: #ab9ba9;
     font-size: 1rem;
     font-weight: 900;
-    float: right;
-    padding: .5rem .5rem 0 0;
+    background-color: #4d394b;
+    float: left;
+    padding: 1rem 0 0 1rem;
+    position: relative;
 }
 
 /* line 1, ../tests/sass/components/_main.scss */
 .listings {
-    height: 100%;
+    /*height: 100%;*/
     width: 240px;
     float: left;
     color: #ab9ba9;
     background-color: #4d394b;
-    overflow-y: auto;
-    overflow-x: hidden;
-    top: 10rem;
+    top: 15rem;
     position: absolute;
+    overflow: hidden;
 }
 
 .mediators {
-    height: 100%;
+    /*height: 100%;*/
     width: 240px;
     float: left;
     color: #ab9ba9;
     background-color: #4d394b;
-    overflow-y: auto;
-    overflow-x: hidden;
+    top: 10rem;
     position: absolute;
+    overflow: hidden;
 }
 
 .users {
-    height: 100%;
+    /*height: 50%;*/
     width: 240px;
     float: left;
     color: #ab9ba9;
     background-color: #4d394b;
-    overflow-y: auto;
-    overflow-x: hidden;
     top: 30rem;
     position: absolute;
+    overflow: hidden;
 }
 
 /* line 11, ../tests/sass/components/_main.scss */
@@ -195,8 +211,12 @@ body {
 }
 
 /* line 4, ../tests/sass/components/_listings.scss */
-.listings_channels, .mediators_available, .users_available {
+.listings_channels, .mediators_available {
     margin: 1rem 0 2rem;
+}
+
+.users_available {
+    margin: 1rem 0 3rem;
 }
 
 /* line 8, ../tests/sass/components/_listings.scss */
@@ -220,7 +240,7 @@ body {
 }
 
 /* line 26, ../tests/sass/components/_listings.scss */
-.channel, .mediator, .user {
+.channel, .mediator {
     height: 24px;
     line-height: 24px;
     -moz-border-radius-topright: 0.25rem;
@@ -231,6 +251,20 @@ body {
     border-bottom-right-radius: 0.25rem;
     margin-right: 17px;
     color: #ffffff;
+    padding-left: 1rem;
+}
+
+.user {
+    height: 18px;
+    line-height: 24px;
+    -moz-border-radius-topright: 0.25rem;
+    -webkit-border-top-right-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    -moz-border-radius-bottomright: 0.25rem;
+    -webkit-border-bottom-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    margin-right: 17px;
+    color: ##ab9ba9;
     padding-left: 1rem;
 }
 
@@ -259,13 +293,6 @@ body {
 /* line 55, ../tests/sass/components/_listings.scss */
 .channel_prefix {
     color: #b2d5c9;
-}
-
-/* line 59, ../tests/sass/components/_listings.scss */
-.disclaimer {
-    font-size: 0.8rem;
-    padding-left: 1rem;
-    margin-right: 17px;
 }
 
 /* line 4, ../tests/sass/components/_message.scss */
@@ -325,17 +352,23 @@ body {
 
 /* line 4, ../tests/sass/components/_user-menu.scss */
 .user-menu {
-    float: left;
     width: 240px;
     height: 100%;
-    cursor: pointer;
-    background: #3e313c;
-    border-top: 2px solid #372c36;
-    padding: 7px 0 9px 8px;
+    background: #4d394b;
     height: 4rem;
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+.scratchpad-footer {
+    width: 20%;
+    height: 100%;
+    background: #808080;
+    height: 4rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 /* line 18, ../tests/sass/components/_user-menu.scss
@@ -382,7 +415,7 @@ body {
 /* line 6, ../tests/sass/components/_input-box.scss */
 .input-box_text {
     font-size: .95rem;
-    width: 90%;
+    width: 70%;
     margin-left: 2%;
     margin-bottom: auto;
     line-height: 1.2rem;
@@ -410,33 +443,16 @@ body {
 }
 
 .message_checkbox {
-    -webkit-appearance: none;
-    background-color: #fafafa;
-    border: 1px solid #cacece;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-    padding: 9px;
-    border-radius: 3px;
-    display: inline-block;
-    position: relative;
     float: right;
 }
 
-.messsage_checkbox:active, .message_checkbox:checked:active {
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-}
-
-.message_checkbox:checked {
-    background-color: #e9ecee;
-    border: 1px solid #adb8c0;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-    color: #99a1a7;
-}
-
-.message_checkbox:checked:after {
-    content: '\2714';
-    font-size: 14px;
-    position: absolute;
-    top: 0px;
-    left: 3px;
-    color: #99a1a7;
+.scratchpad {
+    height: 100%;
+    width: 20%;
+    float: right;
+    color: #ab9ba9;
+    background-color: #808080;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
 }

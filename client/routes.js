@@ -3,7 +3,7 @@ Router.configure({
 });
 
 Router.route('/', function() {
-    this.redirect('/general chat')
+    this.redirect('/general')
 });
 
 Router.route('/:channel', function() {
@@ -12,5 +12,6 @@ Router.route('/:channel', function() {
 });
 
 Router.route('/:mediator', function() {
-	this.redirect('/request mediator')
+	Session.set('mediatorlist', this,params.mediator);
+	this.render('mediators');
 });
