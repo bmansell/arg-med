@@ -39,6 +39,22 @@ Template.channel.helpers({
             return 'active';
         } else {
             return '';
+        } 
+    }
+});
+
+Template.users.helpers({
+    users: function() {
+        return Meteor.users.find().fetch();
+    }
+});
+
+Template.mediator.helpers({
+    active: function() {
+        if(Session.get('mediator') === this.name) {
+            return 'active';
+        } else {
+            return '';
         }
     }
 });

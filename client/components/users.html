@@ -1,0 +1,12 @@
+<template name="users">
+	<div class="users">
+		<div class="users_available">
+			<h2 class="users_header">People</h2>
+			<ul class="user_list">
+				{{#each users}}
+					{{> user}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</template>

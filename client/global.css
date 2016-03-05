@@ -158,7 +158,7 @@ body {
     background-color: #4d394b;
     overflow-y: auto;
     overflow-x: hidden;
-    top: 120px;
+    top: 10rem;
     position: absolute;
 }
 
@@ -173,6 +173,18 @@ body {
     position: absolute;
 }
 
+.users {
+    height: 100%;
+    width: 240px;
+    float: left;
+    color: #ab9ba9;
+    background-color: #4d394b;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 30rem;
+    position: absolute;
+}
+
 /* line 11, ../tests/sass/components/_main.scss */
 .message-history {
     margin-left: 240px;
@@ -183,12 +195,12 @@ body {
 }
 
 /* line 4, ../tests/sass/components/_listings.scss */
-.listings_channels, .mediators_available {
+.listings_channels, .mediators_available, .users_available {
     margin: 1rem 0 2rem;
 }
 
 /* line 8, ../tests/sass/components/_listings.scss */
-.listings_header, .mediators_header {
+.listings_header, .mediators_header, .users_header {
     text-align: left;
     font-size: .8rem;
     line-height: 1.25rem;
@@ -201,14 +213,14 @@ body {
 }
 
 /* line 20, ../tests/sass/components/_listings.scss */
-.channel_list, .mediator_list {
+.channel_list, .mediator_list, .user_list {
     list-style-type: none;
     text-align: left;
     color: #ab9ba9;
 }
 
 /* line 26, ../tests/sass/components/_listings.scss */
-.channel, .mediator {
+.channel, .mediator, .user {
     height: 24px;
     line-height: 24px;
     -moz-border-radius-topright: 0.25rem;
@@ -240,7 +252,7 @@ body {
 }
 
 /* line 51, ../tests/sass/components/_listings.scss */
-.channel.active {
+.channel.active, .mediator.active {
     background: #4c9689;
 }
 
@@ -397,6 +409,34 @@ body {
     color: inherit;
 }
 
-.add_channel {
+.message_checkbox {
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    float: right;
+}
 
+.messsage_checkbox:active, .message_checkbox:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.message_checkbox:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+
+.message_checkbox:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #99a1a7;
 }
