@@ -2,6 +2,9 @@
 @include foundation-everything;
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 
+$header-height: 53px;
+$footer-height: 64px;
+
 .channel_name, .mediator_name {
 	text-decoration: none;
     color: inherit;
@@ -36,7 +39,7 @@
 .header {
     top: 0;
     left: 0;
-    height: 53px;
+    height: $header-height;
     width: 100%;
 }
 
@@ -78,8 +81,8 @@ body {
 
 .main {
     position: fixed;
-    top: 53px;
-    bottom: 64px;
+    top: $header-height;
+    bottom: $footer-height;
     left: 0px;
     right: 0px;
     height: auto;
