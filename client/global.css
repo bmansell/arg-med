@@ -85,15 +85,6 @@ body {
     padding-bottom: 64px;
 }
 
-/* line 23, ../tests/sass/_layout.scss */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 53px;
-    width: 100%;
-}
-
 /* line 31, ../tests/sass/_layout.scss */
 .main {
     height: 100%;

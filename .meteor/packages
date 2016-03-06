@@ -21,3 +21,5 @@ accounts-password
 accounts-ui
 iron:router
 alanning:roles
+zurb:foundation-sites
+mizzao:jquery-ui

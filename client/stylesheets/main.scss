@@ -1,0 +1,44 @@
+@import '{zurb:foundation-sites}/scss/foundation';
+@include foundation-everything;
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+
+.channel_name, .mediator_name {
+	text-decoration: none;
+    color: inherit;
+}
+
+.message_checkbox {
+	float: right;
+}
+
+.scratchpad {
+	height: 100%;
+	width: 20%;
+	float: right;
+	color: #ab9ba9;
+	background-color: #808080;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.scratchpad-footer {
+    width: 20%;
+    height: 100%;
+    background: #808080;
+    height: 4rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    height: 53px;
+    width: 100%;
+}
+
+body {
+    font-family: 'Lato';
+}
