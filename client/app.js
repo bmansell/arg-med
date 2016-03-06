@@ -69,6 +69,17 @@ Template.addchannel.events({
     }
 });
 
+Template.myreveal.onRendered(function () {
+  this.myrevealInstance = new Foundation.Reveal($('#myreveal'));
+});
+
+Template.myreveal.onDestroyed(function () {
+  let reveal = this.myrevealInstance;
+  if (reveal) {
+    reveal.destroy();
+  }
+});
+
 Accounts.ui.config({
     passwordSignupFields: 'USERNAME_ONLY'
 });

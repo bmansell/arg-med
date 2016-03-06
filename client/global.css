@@ -85,15 +85,6 @@ body {
     padding-bottom: 64px;
 }
 
-/* line 23, ../tests/sass/_layout.scss */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 53px;
-    width: 100%;
-}
-
 /* line 31, ../tests/sass/_layout.scss */
 .main {
     height: 100%;
@@ -359,16 +350,6 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-}
-
-.scratchpad-footer {
-    width: 20%;
-    height: 100%;
-    background: #808080;
-    height: 4rem;
-    position: fixed;
-    bottom: 0;
-    right: 0;
 }
 
 /* line 18, ../tests/sass/components/_user-menu.scss
