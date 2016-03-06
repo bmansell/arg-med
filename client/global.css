@@ -352,16 +352,6 @@ body {
     left: 0;
 }
 
-.scratchpad-footer {
-    width: 20%;
-    height: 100%;
-    background: #808080;
-    height: 4rem;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
 /* line 18, ../tests/sass/components/_user-menu.scss
 .user-menu_profile-pic {
     display: inline-block;
