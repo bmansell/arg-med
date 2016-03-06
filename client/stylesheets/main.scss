@@ -87,3 +87,20 @@ body {
     right: 0px;
     height: auto;
 }
+
+.reveal {
+    overflow-y: visible;
+}
+
+.selectize-input,
+.selectize-control.multi .selectize-input.has-items,
+.selectize-input.has-items {
+    padding: 0px 6px 0px 6px;
+}
+
+.channel_list, .mediator_list, .user_list {
+    list-style-type: none;
+    text-align: left;
+    color: #ab9ba9;
+    margin-left: 0px;
+}

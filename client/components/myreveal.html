@@ -1,12 +1,16 @@
 <template name="myreveal">
   <div class="large reveal" id="myreveal">
-    <h1>Select A Mediator</h1>
-    <p>Under Construction!</p>
+    <h1>Request Mediator</h1>
+    <p>Filter by Qualifications</p>
     <button class="close-button" data-close aria-label="Close reveal" type="button">
       <span aria-hidden="true">&times;</span>
     </button>
+    {{> categoryselection}}
   </div>
 <script>
 $("#myreveal").draggable();
+$(document).ready(function() {
+    $(mediatorCategorySelect).selectize();
+});
 </script>
 </template>
